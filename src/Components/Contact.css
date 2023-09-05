@@ -48,7 +48,7 @@
 }
 
 .submit-button {
-  background-color: #E2C2B3;
+  background-color: #FBC403;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -58,7 +58,7 @@
 }
 
 .submit-button:hover {
-  background-color: #687477;
+  background-color: black;
 }
 
 /* Media query for smaller screens */
