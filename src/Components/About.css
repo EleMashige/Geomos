@@ -1,0 +1,45 @@
+/* Update your CSS file (About.css) */
+.about-section {
+    text-align: center;
+    padding: 20px;
+  }
+
+  .about-content {
+    display: flex;
+    align-items: center; /* Vertically center the items */
+    justify-content: center;
+  }
+
+  .about-image {
+    max-height: 600px; /* Set a maximum height for the image */
+    width: auto; /* Allow the image to scale proportionally */
+    object-fit: contain;
+    margin-right: 20px; /* Add spacing between the image and text */
+    border-radius: 10px;
+  }
+
+  .about-text {
+    max-height: 600px; /* Set a maximum height for the text container */
+    overflow: auto; /* Add scrolling for overflowing content */
+    flex: 1; /* Allow the text container to grow as needed */
+    text-align: left;
+    padding: 10px;
+  }
+
+  /* Media query for responsive design */
+  @media (max-width: 768px) {
+    .about-content {
+      flex-direction: column;
+    }
+
+    .about-image,
+    .about-text {
+      max-height: none; /* Reset maximum height for smaller screens */
+      width: 100%; /* Allow the image to take full width */
+      margin-right: 0; /* Reset margin for smaller screens */
+    }
+  }
+
+
+
+

@@ -1,0 +1,75 @@
+
+/* Define a CSS class for the underlined heading */
+.underlined-heading {
+  text-decoration: underline;
+  text-underline-offset: 9px; /* Adjust the offset as needed */
+  text-decoration-color: white;
+}
+
+
+.image-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.image-item {
+  position: relative;
+  overflow: hidden;
+  width: 280px; /* Set the desired width for all images */
+  height: 400px; /* Set the desired height for all images */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.image-item:hover {
+  transform: scale(1.05); /* Add a subtle hover effect */
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.zoomed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  background: rgba(0, 0, 0, 0.8); /* Dark background for the zoomed image */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1; /* Initially, the zoomed image is visible */
+  transform: scale(1); /* Initially, the zoomed image is at its original size */
+}
+
+.zoomed .image {
+  max-width: 90%; /* Adjust the maximum width for the zoomed image */
+  max-height: 90%; /* Adjust the maximum height for the zoomed image */
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.zoomed.hidden {
+  opacity: 0; /* When hidden, set opacity to 0 */
+  transform: scale(0.5); /* When hidden, scale down to 50% */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .image-item {
+    max-width: 100%; /* Make the images full width on smaller screens */
+    margin-left: 45px;
+  }
+}

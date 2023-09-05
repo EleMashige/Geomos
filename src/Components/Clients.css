@@ -1,0 +1,36 @@
+.header {
+  text-decoration: underline;
+  text-underline-offset: 7px; /* Adjust the offset as needed */
+  text-decoration-color: white;
+}
+
+
+.client-section {
+    margin-top: 100px;
+}
+
+.client-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Distribute the cards evenly */
+    margin: 0 -10px; /* Add negative margin to compensate for card spacing */
+  }
+
+  .client-card {
+    margin: 10px; /* Add margin to create spacing between cards */
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: calc(20% - 20px); /* Calculate card width to fit 5 cards per row */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .client-card img {
+    max-width: 100%;
+    max-height: 100px;
+    object-fit: contain;
+  }
+
+  .client-card h3 {
+    margin-top: 10px;
+    font-size: 16px;
+  }
