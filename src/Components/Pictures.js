@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import photos from '../PicturesArray'; // Assuming 'photos' is in the same directory
 import './Pictures.css'; // Import the CSS file for styling
+import GetImages from './GetImages';
+import AddImage from './AddImages';
 import Footer from './Footer'
 
 function Pictures() {
@@ -16,7 +18,9 @@ function Pictures() {
 
   return (
     <div className="App">
-      <h2 class="underlined-heading">Explore Our Images</h2>
+    <GetImages />
+    <AddImage />
+      <h2 className="underlined-heading">Explore Our Images</h2>
       <div className="image-gallery">
         {photos.map((photo, index) => (
           <div
